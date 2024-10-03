@@ -21,6 +21,7 @@ public class MicrowaveControllerTest {
         assertTrue(microwave.isDoorOpen());
     }
 
+
     // When I close the door, the light turns off.
     @Test
     void TestDoorCloseLightOff() {

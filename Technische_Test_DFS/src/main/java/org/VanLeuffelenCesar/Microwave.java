@@ -4,11 +4,16 @@ import org.VanLeuffelenCesar.Interface.IMicrowave;
 
 public class Microwave implements IMicrowave, IMicrowave.EventListener {
 
+    // attributes
     private Boolean doorOpen = false;
     private Boolean heaterOn = false;
     private Boolean lightOn = false;
     private int heatingTime = 0;
 
+    // no-arg constructor (optional)
+    public Microwave() {}
+
+    // interface methodes
     @Override
     public void turnOnHeater() {
         heaterOn = true;
@@ -23,7 +28,7 @@ public class Microwave implements IMicrowave, IMicrowave.EventListener {
 
     @Override
     public Boolean isDoorOpen() {
-        return doorOpen;
+        return lightOn;
     }
 
     @Override
@@ -46,12 +51,9 @@ public class Microwave implements IMicrowave, IMicrowave.EventListener {
         }
     }
 
+    // extra checking methodes
     public Boolean isHeaterOn() {
         return heaterOn;
-    }
-
-    public Boolean isLightOn() {
-        return lightOn;
     }
 
     public int getHeatingTime() {
